@@ -56,19 +56,19 @@ pip install -r requirements.txt
 ### 3. Apply Database Migrations
 Prepare the database for use:
 ```bash
-python manage.py migrate
+make mm
 ```
 
 ### 4. Create a Superuser (Optional)
 If you want to access the admin dashboard, create a superuser account:
 ```bash
-python manage.py createsuperuser
+make superuser
 ```
 
 ### 5. Run the Development Server
 Start the server to see your news website in action:
 ```bash
-python manage.py runserver
+make run
 ```
 You can now access your site at `http://127.0.0.1:8000/`.
 
