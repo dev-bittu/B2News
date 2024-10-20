@@ -93,6 +93,7 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'b2news.context_processors.site_settings',
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
@@ -168,6 +169,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Authentication user model
 AUTH_USER_MODEL = 'account.User'
 
+SITE_SETTINGS = config.get('SITE_SETTINGS', {})
 
 
 EMAIL_BACKEND = config.get('EMAIL_BACKEND', 'django.core.mail.backends.smtp.EmailBackend')

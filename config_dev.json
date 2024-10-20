@@ -15,5 +15,32 @@
     "EMAIL_USE_TLS": true,
     "EMAIL_PORT": 587,
     "EMAIL_HOST_USER": "",
-    "EMAIL_HOST_PASSWORD": ""
+    "EMAIL_HOST_PASSWORD": "",
+
+    "SITE_SETTINGS": {
+        "SITE_NAME": "B2News",
+        "FOOTER_DESC": "B2News is an open-source, Django-based news website platform designed for modern, responsive, and animated news publishing. Built with Tailwind CSS, it ensures high performance, SEO-friendly features, and customizable configurations, making it easy to launch your own news portal.",
+        "SOCIAL_MEDIA": [
+            {
+                "title": "Facebook",
+                "link": "#",
+                "fontawesome_class": "fa-brands fa-facebook"
+            },
+            {
+                "title": "X",
+                "link": "#",
+                "fontawesome_class": "fa-brands fa-x"
+            },
+            {
+                "title": "Youtube",
+                "link": "#",
+                "fontawesome_class": "fa-brands fa-youtube"
+            },
+            {
+                "title": "Linkedin",
+                "link": "#",
+                "fontawesome_class": "fa-brands fa-linkedin"
+            }
+        ]
+    }
 }

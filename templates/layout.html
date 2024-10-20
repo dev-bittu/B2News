@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title  -->
+    <title>{% block title %}{% endblock %} | {{ SITE_NAME }}</title>
+    <meta name="description" content="Tailwind CSS News Template">
+
+    <!-- Development css -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
+
+    <!-- Favicon  -->
+    <link rel="icon" href="{% static 'img/favicon.jpg' %}">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    {% block css %}{% endblock %}
+</head>
+
+<body class="text-gray-700 pt-9 sm:pt-10">
+    {% include '_navbar.html' %}
+
+    <!-- =========={ MAIN }==========  -->
+    {% block body %}{% endblock %}
+    <!-- end main -->
+
+    {% include '_footer.html' %}
+
+    {% include '_scroll_to_top.html' %}
+
+    <!--Vendor js-->
+    <script src="{% static 'vendors/hc-sticky/dist/hc-sticky.js' %}"></script>
+    <script src="{% static 'vendors/glightbox/dist/js/glightbox.min.js' %}"></script>
+    <script src="{% static 'vendors/@splidejs/splide/dist/js/splide.min.js' %}"></script>
+    <script
+        src="{% static 'vendors/@splidejs/splide-extension-video/dist/js/splide-extension-video.min.js' %}"></script>
+    <script src="{% static 'js/theme.js' %}"></script>
+    {% block js %}{% endblock %}
+</body>
+
+</html>
