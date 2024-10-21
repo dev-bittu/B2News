@@ -33,4 +33,15 @@ ready:
 	pip install -r requirements.txt
 	@make mm
 	@make collectstatic
-	@make test
+	@make 
+	
+clean:
+	rm -rf ./*/migrations/00*.py
+	rm -rf ./*/__pycache__/*
+	rm -rf ./*/migrations/__pycache__/*.pyc
+
+cleandb:
+	rm -rf db.sqlite3
+	@make clean
+	@make mm
+	@make superuser
