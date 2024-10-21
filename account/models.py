@@ -5,11 +5,12 @@ from .managers import UserManager
 
 
 class User(AbstractUser):
-    username = None
     email = models.EmailField(_("email address"), unique=True)
+    avatar = models.ImageField(upload_to="avatar/", default="avatar/default.jpeg")
+    is_author = models.BooleanField(default=False)
 
     USERNAME_FIELD = "email"
-    REQUIRED_FIELDS = []
+    REQUIRED_FIELDS = ["username"]
 
     objects = UserManager()
 
