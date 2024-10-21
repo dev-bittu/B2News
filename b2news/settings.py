@@ -70,6 +70,7 @@ INSTALLED_APPS = [
 
 EXTERNAL_APPS = [
     'account.apps.AccountConfig',
+    'news.apps.NewsConfig',
 ]
 
 INSTALLED_APPS += EXTERNAL_APPS
