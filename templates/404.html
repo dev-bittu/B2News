@@ -1,8 +1,10 @@
-{% extend 'layout.html' %}
+{% extends 'layout.html' %}
 
-{% block title %}{% endblock %}
+{% block title %}404 - Page Not Found{% endblock %}
 
 {% block css %}{% endblock %}
+
+{% load static %}
 
 {% block body %}
 <main id="content">
@@ -12,7 +14,7 @@
             <div class="mx-auto table text-center text-sm">
                 <a class="uppercase" href="#">Advertisement</a>
                 <a href="#">
-                    <img src="src/img/ads/ads_728.jpg" alt="advertisement area">
+                    <img src="{% static 'img/ads/ads_728.jpg' %}" alt="advertisement area">
                 </a>
             </div>
         </div>
@@ -27,7 +29,7 @@
                             <h1 class="text-6xl text-gray-800 font-bold mb-2">404</h1>
                             <span class="inline-block h-0.5 w-20 bg-red-600"></span>
                         </div>
-                        <h3 class="text-2xl mb-2">Oops! That page can’t be found.</h3>
+                        <h3 class="text-2xl mb-2">Oops! That page can't be found.</h3>
                     </div>
                 </div>
             </div>

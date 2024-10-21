@@ -40,6 +40,16 @@
                 "title": "Linkedin",
                 "link": "#",
                 "fontawesome_class": "fa-brands fa-linkedin"
+            },
+            {
+                "title": "Telegram",
+                "link": "#",
+                "fontawesome_class": "fa-brands fa-telegram"
+            },
+            {
+                "title": "Whatsapp",
+                "link": "#",
+                "fontawesome_class": "fa-brands fa-whatsapp"
             }
         ]
     }

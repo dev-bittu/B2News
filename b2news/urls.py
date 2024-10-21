@@ -24,4 +24,6 @@ urlpatterns = [
     path('account/', include('account.urls')),
 
     path('', views.index, name='index'),
+    path('home-2/', views.index2, name='index-2'),
+    path('404/', views.error404, name='404'),
 ]
