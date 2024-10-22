@@ -1,6 +1,8 @@
 # B2News
 **B2News** is an open-source, modern, and responsive news website built with Django and Tailwind CSS. It provides a seamless user experience, focusing on speed, usability, and visual appeal. Whether you're a developer looking to launch a news platform or just exploring the idea, B2News is designed for easy setup and quick deployment.
 
+> **Note**: This project is currently in development and may not be regularly updated. Features and documentation are subject to change. Contributions are welcome, but please be aware that this is still a work in progress.
+
 ## Table of Contents
 - [Overview](#overview)
 - [Purpose](#purpose)
