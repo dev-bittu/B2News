@@ -28,6 +28,8 @@ urlpatterns = [
     path("", views.index, name="index"),
     path("search/", views.search, name="search"),
     path("home-2/", views.index2, name="index-2"),
+    path("about-us/", views.about_us, name="about-us"),
+    path("contact/", views.contact, name="contact"),
     path("404/", views.error404, name="404"),
     path("author/@<str:username>/", views.author, name="author"),
 ]

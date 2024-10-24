@@ -48,6 +48,12 @@ def search(request):
 def index2(request):
     return render(request, "index.html")
 
+def about_us(request):
+    return render(request, "about_us.html")
+
+def contact(request):
+    return render(request, "contact.html")
+
 
 def error404(request):
     return render(request, "404.html")
