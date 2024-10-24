@@ -12,6 +12,7 @@ class BaseContentModel(models.Model):
     desc = models.CharField(max_length=250)
     slug = models.SlugField(unique=True, blank=True)
     thumbnail = models.ImageField(upload_to="thumbnails/%Y/%m/%d/")
+    is_active = models.BooleanField(default=True)
 
     # Timestamps
     published_at = models.DateTimeField(auto_now_add=True)
@@ -39,11 +40,10 @@ class Category(BaseContentModel):
 # News Model
 class News(BaseContentModel):
     author = models.ForeignKey(
-        User, on_delete=models.SET_NULL, null=True, blank=True, related_name="news"
+        User, on_delete=models.CASCADE, related_name="news"
     )
     content = models.TextField()
     views = models.IntegerField(default=0)
-    is_active = models.BooleanField(default=True)
     category = models.ForeignKey(
         to=Category, on_delete=models.SET_NULL, null=True, blank=True, related_name="news"
     )

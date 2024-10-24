@@ -6,7 +6,7 @@ from .models import Category, News
 # Register your models here.
 @admin.register(Category)
 class CategoryAdmin(ImportExportModelAdmin):
-    list_display = ("id", "title", "published_at", "slug")
+    list_display = ("id", "title", "published_at", "is_active")
 
 
 @admin.register(News)

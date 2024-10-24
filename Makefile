@@ -3,6 +3,9 @@
 freeze:
 	pip freeze > requirements.txt
 
+seed:
+	python manage.py seed news --number 10
+
 mm:
 	python manage.py makemigrations
 	python manage.py migrate
