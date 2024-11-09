@@ -11,7 +11,7 @@ class BaseContentModel(models.Model):
     title = models.CharField(max_length=150)
     desc = models.CharField(max_length=250)
     slug = models.SlugField(unique=True, blank=True)
-    thumbnail = models.ImageField(upload_to="thumbnails/%Y/%m/%d/")
+    thumbnail = models.ImageField(upload_to="thumbnail/%Y/%m/%d/")
     is_active = models.BooleanField(default=True)
 
     # Timestamps

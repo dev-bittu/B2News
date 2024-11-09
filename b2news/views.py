@@ -9,7 +9,11 @@ User = get_user_model()
 
 
 def index(request):
-    return render(request, "index.html")
+    ctx = {
+        "headline": News.objects.filter(is_active=True).first(),
+        "top_news": News.objects.filter(is_active=True)[:4],
+    }
+    return render(request, "index.html", ctx)
 
 
 def search(request):
@@ -26,7 +30,7 @@ def search(request):
         Q(title__icontains=keyword)
         | Q(desc__icontains=keyword)
         | Q(content__icontains=keyword),
-        is_active=True  # Only return active news articles
+        is_active=True,  # Only return active news articles
     )
 
     category_results = Category.objects.filter(
@@ -39,7 +43,6 @@ def search(request):
         "categories": category_results,
         "keyword": keyword,  # Pass keyword to display in the template if needed
     }
-    
 
     # Render the search results in the 'search.html' template
     return render(request, "search.html", ctx)
@@ -48,8 +51,10 @@ def search(request):
 def index2(request):
     return render(request, "index.html")
 
+
 def about_us(request):
     return render(request, "about_us.html")
+
 
 def contact(request):
     return render(request, "contact.html")
